@@ -1,15 +1,21 @@
 # N-Queens Problem Solver
-## Backtracking with Pruning — Chess Board Arrangement
+### Backtracking with Pruning — Chess Board Arrangement
 
-### Course Information
-- **Course:** Design and Analysis of Algorithms
-- **University:** Aksum University, AIT
-- **Faculty:** Faculty of Computing Technology
-- **Department:** Department of Computer Science
-- **Language:** Java
-- **Algorithm:** Backtracking with Bounding Function
+---
 
-### Group Members
+## Course Information
+
+| Field | Detail |
+|---|---|
+| Course | Design and Analysis of Algorithms |
+| University | Aksum University, AIT |
+| Faculty | Faculty of Computing Technology |
+| Department | Department of Computer Science |
+| Language | Java |
+| Algorithm | Backtracking with Bounding Function |
+
+## Group Members
+
 | No | Name | ID |
 |----|------|----|
 | 1 | Weldearegay Gebrey | Aku-1602148 |
@@ -18,21 +24,33 @@
 
 ---
 
-### Problem Overview
-Place N queens on an N×N chessboard such that no two queens attack each other.
-Queens attack along rows, columns, and diagonals.
+## Problem Overview
 
-### Features Implemented
+Place N queens on an N×N chessboard such that no two queens attack each other.
+Queens attack along rows, columns, and both diagonals.
+
+This is a classic **constraint satisfaction problem** modelling real-world scenarios like antenna placement without interference and conflict-free scheduling.
+
+---
+
+## Features Implemented
+
 - ✅ Backtracking algorithm with pruning
-- ✅ 1D array representation (index = row, value = column)
-- ✅ Bounding function — checks column and diagonal conflicts
+- ✅ 1D array representation — `index = row`, `value = column` (row conflicts structurally impossible)
+- ✅ Bounding function `isSafe()` — checks column and diagonal conflicts
 - ✅ Solves for N = 8, 10, 12
 - ✅ Counts all distinct solutions
-- ✅ Displays first 3 solutions as visual Q/. grid
-- ✅ Execution time and recursive call count per board size
-- ✅ Summary table with complexity evidence
+- ✅ Displays first 3 solutions as visual Q/. grid with row/column labels
+- ✅ Raw 1D array printed under each solution board
+- ✅ Pruned branch count + pruning % per board size
+- ✅ Execution time (ms) and recursive call count per board size
+- ✅ Summary table — N, solutions, time, recursive calls, pruned branches
+- ✅ Complexity analysis — N! worst case vs actual calls with % reduction
+- ✅ Real-world applications section in output
 
-### How to Compile and Run
+---
+
+## How to Compile and Run
 
 ```bash
 # Compile
@@ -44,35 +62,40 @@ java -cp out nqueens.NQueensSolver
 
 ---
 
-### Known Solution Counts
+## Known Solution Counts
 
-| N | Distinct Solutions |
-|---|--------------------|
-| 8 | 92 |
-| 10 | 724 |
-| 12 | 14,200 |
-
-### Complexity Analysis
-
-| Operation | Time Complexity |
-|-----------|----------------|
-| Worst case (no pruning) | O(N!) |
-| With backtracking pruning | Much less than O(N!) |
-| isSafe() per call | O(N) |
-| Space complexity | O(N) |
-
-### Real-World Applications
-- Constraint satisfaction problems
-- Antenna placement without interference
-- Scheduling without conflicts
-- Resource placement optimization
-- CPU register allocation
+| N | Distinct Solutions | Pruning Reduction |
+|---|---|---|
+| 8 | 92 | ~94.9% |
+| 10 | 724 | ~99.0% |
+| 12 | 14,200 | ~99.8% |
 
 ---
 
-### 📊 Screenshots
+## Complexity Analysis
 
-**Board Visualization (N=8, Solution #1)**
+| Operation | Complexity |
+|---|---|
+| Worst case (no pruning) | O(N!) |
+| With backtracking pruning | Much less than O(N!) |
+| `isSafe()` per call | O(N) |
+| Space complexity | O(N) — 1D board array + call stack |
+
+---
+
+## Real-World Applications
+
+- Antenna placement without signal interference
+- Conflict-free task scheduling
+- CPU register allocation
+- Resource placement optimisation
+- Constraint satisfaction problems
+
+---
+
+## Screenshots
+
+**Board Visualization — N=8, Solution #1**
 
 ![N=8 Solution](screenshots/n8_solution.svg)
 
@@ -80,4 +103,6 @@ java -cp out nqueens.NQueensSolver
 
 ![Solution Count](screenshots/solution_counts.svg)
 
-> 📄 See `docs/` for full requirements, design, and implementation plan.
+---
+
+> See `docs/` for full requirements, design document, and implementation plan.

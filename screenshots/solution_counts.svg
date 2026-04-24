@@ -1,44 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" viewBox="0 0 600 380">
-  <rect width="600" height="380" fill="#0D1117"/>
-  <text x="300" y="30" text-anchor="middle" font-family="Segoe UI,Arial" font-size="15" font-weight="bold" fill="#58A6FF">N-Queens — Distinct Solutions per Board Size</text>
-  <text x="300" y="50" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#8B949E">Backtracking with pruning · O(N!) worst case</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="420" viewBox="0 0 580 420">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2a3a"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="bar8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4fc3f7"/>
+      <stop offset="100%" stop-color="#0277bd"/>
+    </linearGradient>
+    <linearGradient id="bar10" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#81c784"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="bar12" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef5350"/>
+      <stop offset="100%" stop-color="#b71c1c"/>
+    </linearGradient>
+    <filter id="barShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
 
-  <!-- Y gridlines -->
-  <line x1="80" y1="70" x2="560" y2="70" stroke="#21262D" stroke-width="1"/>
-  <line x1="80" y1="120" x2="560" y2="120" stroke="#21262D" stroke-width="1"/>
-  <line x1="80" y1="170" x2="560" y2="170" stroke="#21262D" stroke-width="1"/>
-  <line x1="80" y1="220" x2="560" y2="220" stroke="#21262D" stroke-width="1"/>
-  <line x1="80" y1="270" x2="560" y2="270" stroke="#21262D" stroke-width="1"/>
-  <line x1="80" y1="310" x2="560" y2="310" stroke="#30363D" stroke-width="1"/>
+  <!-- Background -->
+  <rect width="580" height="420" rx="14" fill="url(#bgGrad)"/>
+  <rect width="580" height="420" rx="14" fill="none" stroke="#30363d" stroke-width="1.5"/>
 
-  <!-- Y labels -->
-  <text x="72" y="74" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">15000</text>
-  <text x="72" y="124" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">12000</text>
-  <text x="72" y="174" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">9000</text>
-  <text x="72" y="224" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">6000</text>
-  <text x="72" y="274" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">3000</text>
-  <text x="72" y="314" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">0</text>
+  <!-- Header -->
+  <rect x="0" y="0" width="580" height="52" rx="14" fill="#161b22"/>
+  <rect x="0" y="38" width="580" height="14" fill="#161b22"/>
+  <circle cx="22" cy="26" r="7" fill="#ff5f57"/>
+  <circle cx="44" cy="26" r="7" fill="#febc2e"/>
+  <circle cx="66" cy="26" r="7" fill="#28c840"/>
+  <text x="290" y="22" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="14"
+        font-weight="bold" fill="#58A6FF">N-Queens — Distinct Solutions per Board Size</text>
+  <text x="290" y="40" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="11"
+        fill="#8b949e">Backtracking with pruning  ·  O(N!) worst case  ·  Java</text>
 
-  <!-- Bars: max=14200, chart height=240, scale=240/15000=0.016 -->
-  <!-- N=8: 92 → h=1.5 → y=308 -->
-  <rect x="140" y="308" width="80" height="2" fill="#58A6FF" rx="2"/>
-  <text x="180" y="302" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="white">92</text>
-  <text x="180" y="330" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" font-weight="bold" fill="#E6EDF3">N=8</text>
+  <!-- Chart area -->
+  <!-- Y axis -->
+  <line x1="80" y1="70" x2="80" y2="320" stroke="#30363d" stroke-width="2"/>
+  <!-- X axis -->
+  <line x1="80" y1="320" x2="530" y2="320" stroke="#30363d" stroke-width="2"/>
 
-  <!-- N=10: 724 → h=11.6 → y=298 -->
-  <rect x="260" y="298" width="80" height="12" fill="#E67E22" rx="2"/>
-  <text x="300" y="292" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="white">724</text>
-  <text x="300" y="330" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" font-weight="bold" fill="#E6EDF3">N=10</text>
+  <!-- Gridlines + Y labels: max=15000, chart height=250, scale=250/15000 -->
+  <line x1="80" y1="70"  x2="530" y2="70"  stroke="#21262d" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="80" y1="112" x2="530" y2="112" stroke="#21262d" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="80" y1="153" x2="530" y2="153" stroke="#21262d" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="80" y1="195" x2="530" y2="195" stroke="#21262d" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="80" y1="237" x2="530" y2="237" stroke="#21262d" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="80" y1="278" x2="530" y2="278" stroke="#21262d" stroke-width="1" stroke-dasharray="5,4"/>
 
-  <!-- N=12: 14200 → h=227 → y=83 -->
-  <rect x="380" y="83" width="80" height="227" fill="#8B0000" rx="2"/>
-  <text x="420" y="77" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="white">14,200</text>
-  <text x="420" y="330" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" font-weight="bold" fill="#E6EDF3">N=12</text>
+  <text x="74" y="74"  text-anchor="end" font-family="'Segoe UI',Arial" font-size="10" fill="#8b949e">15,000</text>
+  <text x="74" y="116" text-anchor="end" font-family="'Segoe UI',Arial" font-size="10" fill="#8b949e">12,000</text>
+  <text x="74" y="157" text-anchor="end" font-family="'Segoe UI',Arial" font-size="10" fill="#8b949e">9,000</text>
+  <text x="74" y="199" text-anchor="end" font-family="'Segoe UI',Arial" font-size="10" fill="#8b949e">6,000</text>
+  <text x="74" y="241" text-anchor="end" font-family="'Segoe UI',Arial" font-size="10" fill="#8b949e">3,000</text>
+  <text x="74" y="324" text-anchor="end" font-family="'Segoe UI',Arial" font-size="10" fill="#8b949e">0</text>
 
-  <!-- Axes -->
-  <line x1="80" y1="310" x2="560" y2="310" stroke="#30363D" stroke-width="2"/>
-  <line x1="80" y1="60" x2="80" y2="310" stroke="#30363D" stroke-width="2"/>
+  <!-- Y axis title -->
+  <text x="16" y="200" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="11"
+        fill="#8b949e" transform="rotate(-90,16,200)">Distinct Solutions</text>
+
+  <!-- Bars
+       scale = 250/15000 = 0.01667
+       N=8:  92    → h = 92*0.01667   = 1.5  → too small, use min 8px for visibility
+       N=10: 724   → h = 724*0.01667  = 12.1 → use 18px for visibility
+       N=12: 14200 → h = 14200*0.01667= 236.7→ y = 320-237 = 83
+  -->
+
+  <!-- N=8 bar (min height 22 for visibility) -->
+  <rect x="140" y="298" width="80" height="22" rx="4" fill="url(#bar8)" filter="url(#barShadow)"/>
+  <!-- value label -->
+  <text x="180" y="292" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="12"
+        font-weight="bold" fill="#4fc3f7">92</text>
+  <!-- x label -->
+  <text x="180" y="342" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="13"
+        font-weight="bold" fill="#e6edf3">N = 8</text>
+
+  <!-- N=10 bar (min height 30 for visibility) -->
+  <rect x="270" y="290" width="80" height="30" rx="4" fill="url(#bar10)" filter="url(#barShadow)"/>
+  <text x="310" y="284" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="12"
+        font-weight="bold" fill="#81c784">724</text>
+  <text x="310" y="342" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="13"
+        font-weight="bold" fill="#e6edf3">N = 10</text>
+
+  <!-- N=12 bar (full height) -->
+  <rect x="400" y="83" width="80" height="237" rx="4" fill="url(#bar12)" filter="url(#barShadow)"/>
+  <text x="440" y="76" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="12"
+        font-weight="bold" fill="#ef5350">14,200</text>
+  <text x="440" y="342" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="13"
+        font-weight="bold" fill="#e6edf3">N = 12</text>
+
+  <!-- Divider -->
+  <line x1="50" y1="362" x2="530" y2="362" stroke="#30363d" stroke-width="1"/>
 
   <!-- Legend -->
-  <text x="300" y="360" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#8B949E">Solutions grow exponentially — pruning makes N=12 feasible in under 1 second</text>
+  <rect x="110" y="372" width="12" height="12" rx="2" fill="url(#bar8)"/>
+  <text x="128" y="382" font-family="'Segoe UI',Arial" font-size="11" fill="#8b949e">N=8 (92 solutions)</text>
+  <rect x="250" y="372" width="12" height="12" rx="2" fill="url(#bar10)"/>
+  <text x="268" y="382" font-family="'Segoe UI',Arial" font-size="11" fill="#8b949e">N=10 (724 solutions)</text>
+  <rect x="400" y="372" width="12" height="12" rx="2" fill="url(#bar12)"/>
+  <text x="418" y="382" font-family="'Segoe UI',Arial" font-size="11" fill="#8b949e">N=12 (14,200)</text>
+
+  <!-- Footer note -->
+  <text x="290" y="408" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="10" fill="#555">
+    Pruning reduces search from O(N!) to ~0.18% of nodes at N=12 — feasible in under 1 second
+  </text>
 </svg>
