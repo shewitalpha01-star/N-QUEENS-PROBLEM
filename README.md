@@ -120,7 +120,3 @@ java -cp out nqueens.NQueensSolver
 ## 📄 Report
 
 [View Full Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/N-QUEENS-PROBLEM/blob/main/docs/report.html)
-
----
-
-[View Full Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/N-QUEENS-PROBLEM/blob/main/docs/report.html)
