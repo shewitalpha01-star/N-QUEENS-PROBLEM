@@ -10,15 +10,30 @@
   .page { max-width: 800px; margin: 0 auto; padding: 40px 50px; }
 
   /* Title page */
-  .title-page { text-align: center; padding: 80px 0 60px; border-bottom: 3px solid #1a3a5c; margin-bottom: 40px; }
-  .title-page .uni { font-size: 13pt; color: #555; margin-bottom: 6px; }
-  .title-page h1 { font-size: 24pt; color: #1a3a5c; margin: 20px 0 8px; }
-  .title-page h2 { font-size: 14pt; color: #2a6090; font-weight: normal; margin-bottom: 30px; }
-  .title-page .badge { display: inline-block; background: #1a3a5c; color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 11pt; margin: 4px; }
-  .title-page .members { margin-top: 30px; }
-  .title-page .members table { margin: 0 auto; border-collapse: collapse; }
-  .title-page .members td { padding: 5px 20px; font-size: 11pt; }
-  .title-page .date { margin-top: 30px; color: #777; font-size: 11pt; }
+  .title-page { text-align: center; padding: 0 0 40px; margin-bottom: 40px; page-break-after: always; }
+  .title-cover { background: linear-gradient(135deg, #1a3a5c 0%, #0d2240 60%, #061428 100%);
+    color: #fff; padding: 50px 40px 40px; border-radius: 0 0 16px 16px; margin-bottom: 30px; }
+  .title-cover .crown { font-size: 52pt; margin-bottom: 10px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); }
+  .title-cover .uni-name { font-size: 15pt; font-weight: bold; color: #7dd4f0; letter-spacing: 1px; margin-bottom: 4px; }
+  .title-cover .uni-sub { font-size: 11pt; color: #a0c8e0; margin-bottom: 30px; }
+  .title-cover h1 { font-size: 26pt; color: #ffffff; margin: 0 0 10px; letter-spacing: 0.5px; }
+  .title-cover h2 { font-size: 13pt; color: #7dd4f0; font-weight: normal; margin-bottom: 24px; }
+  .title-cover .divider { width: 80px; height: 3px; background: linear-gradient(90deg,#FFD700,#ff9900); margin: 0 auto 24px; border-radius: 2px; }
+  .title-cover .badges { margin-bottom: 0; }
+  .title-cover .badge { display: inline-block; background: rgba(255,255,255,0.12); color: #e0f0ff;
+    padding: 5px 16px; border-radius: 20px; font-size: 10.5pt; margin: 3px; border: 1px solid rgba(255,255,255,0.2); }
+  .title-body { padding: 0 20px; }
+  .title-body .section-label { font-size: 10pt; color: #888; text-transform: uppercase;
+    letter-spacing: 2px; margin: 24px 0 10px; }
+  .title-body .info-table { margin: 0 auto 20px; border-collapse: collapse; width: auto; }
+  .title-body .info-table td { padding: 6px 20px; font-size: 11.5pt; border-bottom: 1px solid #eee; }
+  .title-body .info-table td:first-child { color: #555; font-weight: bold; text-align: right; }
+  .title-body .info-table td:last-child { color: #1a3a5c; text-align: left; }
+  .title-body .members-table { margin: 0 auto; border-collapse: collapse; }
+  .title-body .members-table th { background: #1a3a5c; color: #fff; padding: 8px 24px; font-size: 11pt; }
+  .title-body .members-table td { padding: 7px 24px; font-size: 11pt; border-bottom: 1px solid #eee; }
+  .title-body .members-table tr:nth-child(even) td { background: #f4f8fc; }
+  .title-page .date { margin-top: 24px; color: #888; font-size: 11pt; }
 
   /* Sections */
   h2.section { font-size: 16pt; color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 6px; margin: 36px 0 14px; }
@@ -66,24 +81,47 @@
 
 <!-- ═══════════════════════════════════════════════════ TITLE PAGE -->
 <div class="title-page">
-  <div class="uni">Aksum University, AIT</div>
-  <div class="uni">Faculty of Computing Technology &nbsp;·&nbsp; Department of Computer Science</div>
-  <h1>N-Queens Problem Solver</h1>
-  <h2>Backtracking with Pruning — Chess Board Arrangement</h2>
-  <div>
-    <span class="badge">Course: Design and Analysis of Algorithms</span>
-    <span class="badge">Language: Java</span>
-    <span class="badge">Q5 Assignment</span>
+
+  <!-- Cover banner -->
+  <div class="title-cover">
+    <div class="crown">♛</div>
+    <div class="uni-name">AKSUM UNIVERSITY — AIT</div>
+    <div class="uni-sub">Faculty of Computing Technology &nbsp;·&nbsp; Department of Computer Science</div>
+    <h1>N-Queens Problem Solver</h1>
+    <h2>Backtracking with Pruning — Chess Board Arrangement</h2>
+    <div class="divider"></div>
+    <div class="badges">
+      <span class="badge">♟ Design and Analysis of Algorithms</span>
+      <span class="badge">☕ Java</span>
+      <span class="badge">📋 Q5 Assignment</span>
+    </div>
   </div>
-  <div class="members">
-    <table>
-      <tr><td><strong>No</strong></td><td><strong>Name</strong></td><td><strong>Student ID</strong></td></tr>
+
+  <!-- Course info -->
+  <div class="title-body">
+    <div class="section-label">Course Information</div>
+    <table class="info-table">
+      <tr><td>Course</td><td>Design and Analysis of Algorithms</td></tr>
+      <tr><td>University</td><td>Aksum University, AIT</td></tr>
+      <tr><td>Faculty</td><td>Faculty of Computing Technology</td></tr>
+      <tr><td>Department</td><td>Department of Computer Science</td></tr>
+      <tr><td>Language</td><td>Java</td></tr>
+      <tr><td>Algorithm</td><td>Backtracking with Bounding Function</td></tr>
+      <tr><td>Submission</td><td>April 2026</td></tr>
+    </table>
+
+    <!-- Group members -->
+    <div class="section-label">Group Members</div>
+    <table class="members-table">
+      <tr><th>No</th><th>Full Name</th><th>Student ID</th></tr>
       <tr><td>1</td><td>Weldearegay Gebrey</td><td>Aku-1602148</td></tr>
       <tr><td>2</td><td>Eyerusalem Teklay</td><td>Aku-1602682</td></tr>
       <tr><td>3</td><td>Shewit Legese</td><td>Aku-1602069</td></tr>
     </table>
+
+    <div class="date">April 2026 &nbsp;·&nbsp; Aksum University, AIT</div>
   </div>
-  <div class="date">April 2026</div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════ 1. INTRODUCTION -->
