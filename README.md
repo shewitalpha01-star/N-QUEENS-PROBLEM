@@ -60,8 +60,6 @@ javac src/nqueens/NQueensSolver.java -d out
 java -cp out nqueens.NQueensSolver
 ```
 
-📄 [View Sample Output (OUTPUT.txt)](OUTPUT.txt)
-
 ---
 
 ## Known Solution Counts
