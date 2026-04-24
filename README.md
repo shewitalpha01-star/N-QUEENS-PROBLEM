@@ -18,9 +18,9 @@
 
 | No | Name | ID |
 |----|------|----|
-| 1 | Weldearegay Gebrey | Aku-1602148 |
-| 2 | Eyerusalem Teklay | Aku-1602682 |
-| 3 | Shewit Legese | Aku-1602069 |
+| 1 | Eyerusalem Teklay | Aku-1602682 |
+| 2 | Shewit Legese | Aku-1602069 |
+| 3 | Weldearegay Gebrey | Aku-1602148 |
 
 ---
 
