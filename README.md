@@ -60,6 +60,8 @@ javac src/nqueens/NQueensSolver.java -d out
 java -cp out nqueens.NQueensSolver
 ```
 
+📄 [View Sample Output (OUTPUT.txt)](OUTPUT.txt)
+
 ---
 
 ## Known Solution Counts
@@ -119,4 +121,4 @@ java -cp out nqueens.NQueensSolver
 
 ## 📄 Report
 
-[View Full HTML Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/N-QUEENS-PROBLEM/blob/main/docs/report.html)
+[View Full HTML Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/N-QUEENS-PROBLEM/blob/main/HTML_Report.html)
