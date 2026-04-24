@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="580" viewBox="0 0 580 580">
+  <defs>
+    <filter id="qs">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2a3a"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8a96e"/>
+      <stop offset="50%" stop-color="#8B6914"/>
+      <stop offset="100%" stop-color="#6b4f10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="580" height="580" rx="14" fill="url(#bg)"/>
+  <rect width="580" height="580" rx="14" fill="none" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="580" height="52" rx="14" fill="#161b22"/>
+  <rect x="0" y="38" width="580" height="14" fill="#161b22"/>
+  <circle cx="22" cy="26" r="7" fill="#ff5f57"/>
+  <circle cx="44" cy="26" r="7" fill="#febc2e"/>
+  <circle cx="66" cy="26" r="7" fill="#28c840"/>
+  <text x="290" y="22" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="14"
+        font-weight="bold" fill="#58A6FF">N-Queens Solver — N=10, Solution #1</text>
+  <text x="290" y="40" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="10"
+        fill="#8b949e">board=[0,2,5,7,9,4,8,1,3,6] · No two queens attack each other</text>
+
+  <!-- Wood frame: 10×10 board, cell=47px, board=470px, origin (55,60) -->
+  <rect x="51" y="56" width="478" height="478" rx="5" fill="url(#frame)"/>
+
+  <!-- Board cells: cell=47px, origin (55,60) -->
+  <!-- Row 0 --><rect x="55"  y="60"  width="47" height="47" fill="#EEEED2"/><rect x="102" y="60"  width="47" height="47" fill="#769656"/><rect x="149" y="60"  width="47" height="47" fill="#EEEED2"/><rect x="196" y="60"  width="47" height="47" fill="#769656"/><rect x="243" y="60"  width="47" height="47" fill="#EEEED2"/><rect x="290" y="60"  width="47" height="47" fill="#769656"/><rect x="337" y="60"  width="47" height="47" fill="#EEEED2"/><rect x="384" y="60"  width="47" height="47" fill="#769656"/><rect x="431" y="60"  width="47" height="47" fill="#EEEED2"/><rect x="478" y="60"  width="47" height="47" fill="#769656"/>
+  <!-- Row 1 --><rect x="55"  y="107" width="47" height="47" fill="#769656"/><rect x="102" y="107" width="47" height="47" fill="#EEEED2"/><rect x="149" y="107" width="47" height="47" fill="#769656"/><rect x="196" y="107" width="47" height="47" fill="#EEEED2"/><rect x="243" y="107" width="47" height="47" fill="#769656"/><rect x="290" y="107" width="47" height="47" fill="#EEEED2"/><rect x="337" y="107" width="47" height="47" fill="#769656"/><rect x="384" y="107" width="47" height="47" fill="#EEEED2"/><rect x="431" y="107" width="47" height="47" fill="#769656"/><rect x="478" y="107" width="47" height="47" fill="#EEEED2"/>
+  <!-- Row 2 --><rect x="55"  y="154" width="47" height="47" fill="#EEEED2"/><rect x="102" y="154" width="47" height="47" fill="#769656"/><rect x="149" y="154" width="47" height="47" fill="#EEEED2"/><rect x="196" y="154" width="47" height="47" fill="#769656"/><rect x="243" y="154" width="47" height="47" fill="#EEEED2"/><rect x="290" y="154" width="47" height="47" fill="#769656"/><rect x="337" y="154" width="47" height="47" fill="#EEEED2"/><rect x="384" y="154" width="47" height="47" fill="#769656"/><rect x="431" y="154" width="47" height="47" fill="#EEEED2"/><rect x="478" y="154" width="47" height="47" fill="#769656"/>
+  <!-- Row 3 --><rect x="55"  y="201" width="47" height="47" fill="#769656"/><rect x="102" y="201" width="47" height="47" fill="#EEEED2"/><rect x="149" y="201" width="47" height="47" fill="#769656"/><rect x="196" y="201" width="47" height="47" fill="#EEEED2"/><rect x="243" y="201" width="47" height="47" fill="#769656"/><rect x="290" y="201" width="47" height="47" fill="#EEEED2"/><rect x="337" y="201" width="47" height="47" fill="#769656"/><rect x="384" y="201" width="47" height="47" fill="#EEEED2"/><rect x="431" y="201" width="47" height="47" fill="#769656"/><rect x="478" y="201" width="47" height="47" fill="#EEEED2"/>
+  <!-- Row 4 --><rect x="55"  y="248" width="47" height="47" fill="#EEEED2"/><rect x="102" y="248" width="47" height="47" fill="#769656"/><rect x="149" y="248" width="47" height="47" fill="#EEEED2"/><rect x="196" y="248" width="47" height="47" fill="#769656"/><rect x="243" y="248" width="47" height="47" fill="#EEEED2"/><rect x="290" y="248" width="47" height="47" fill="#769656"/><rect x="337" y="248" width="47" height="47" fill="#EEEED2"/><rect x="384" y="248" width="47" height="47" fill="#769656"/><rect x="431" y="248" width="47" height="47" fill="#EEEED2"/><rect x="478" y="248" width="47" height="47" fill="#769656"/>
+  <!-- Row 5 --><rect x="55"  y="295" width="47" height="47" fill="#769656"/><rect x="102" y="295" width="47" height="47" fill="#EEEED2"/><rect x="149" y="295" width="47" height="47" fill="#769656"/><rect x="196" y="295" width="47" height="47" fill="#EEEED2"/><rect x="243" y="295" width="47" height="47" fill="#769656"/><rect x="290" y="295" width="47" height="47" fill="#EEEED2"/><rect x="337" y="295" width="47" height="47" fill="#769656"/><rect x="384" y="295" width="47" height="47" fill="#EEEED2"/><rect x="431" y="295" width="47" height="47" fill="#769656"/><rect x="478" y="295" width="47" height="47" fill="#EEEED2"/>
+  <!-- Row 6 --><rect x="55"  y="342" width="47" height="47" fill="#EEEED2"/><rect x="102" y="342" width="47" height="47" fill="#769656"/><rect x="149" y="342" width="47" height="47" fill="#EEEED2"/><rect x="196" y="342" width="47" height="47" fill="#769656"/><rect x="243" y="342" width="47" height="47" fill="#EEEED2"/><rect x="290" y="342" width="47" height="47" fill="#769656"/><rect x="337" y="342" width="47" height="47" fill="#EEEED2"/><rect x="384" y="342" width="47" height="47" fill="#769656"/><rect x="431" y="342" width="47" height="47" fill="#EEEED2"/><rect x="478" y="342" width="47" height="47" fill="#769656"/>
+  <!-- Row 7 --><rect x="55"  y="389" width="47" height="47" fill="#769656"/><rect x="102" y="389" width="47" height="47" fill="#EEEED2"/><rect x="149" y="389" width="47" height="47" fill="#769656"/><rect x="196" y="389" width="47" height="47" fill="#EEEED2"/><rect x="243" y="389" width="47" height="47" fill="#769656"/><rect x="290" y="389" width="47" height="47" fill="#EEEED2"/><rect x="337" y="389" width="47" height="47" fill="#769656"/><rect x="384" y="389" width="47" height="47" fill="#EEEED2"/><rect x="431" y="389" width="47" height="47" fill="#769656"/><rect x="478" y="389" width="47" height="47" fill="#EEEED2"/>
+  <!-- Row 8 --><rect x="55"  y="436" width="47" height="47" fill="#EEEED2"/><rect x="102" y="436" width="47" height="47" fill="#769656"/><rect x="149" y="436" width="47" height="47" fill="#EEEED2"/><rect x="196" y="436" width="47" height="47" fill="#769656"/><rect x="243" y="436" width="47" height="47" fill="#EEEED2"/><rect x="290" y="436" width="47" height="47" fill="#769656"/><rect x="337" y="436" width="47" height="47" fill="#EEEED2"/><rect x="384" y="436" width="47" height="47" fill="#769656"/><rect x="431" y="436" width="47" height="47" fill="#EEEED2"/><rect x="478" y="436" width="47" height="47" fill="#769656"/>
+  <!-- Row 9 --><rect x="55"  y="483" width="47" height="47" fill="#769656"/><rect x="102" y="483" width="47" height="47" fill="#EEEED2"/><rect x="149" y="483" width="47" height="47" fill="#769656"/><rect x="196" y="483" width="47" height="47" fill="#EEEED2"/><rect x="243" y="483" width="47" height="47" fill="#769656"/><rect x="290" y="483" width="47" height="47" fill="#EEEED2"/><rect x="337" y="483" width="47" height="47" fill="#769656"/><rect x="384" y="483" width="47" height="47" fill="#EEEED2"/><rect x="431" y="483" width="47" height="47" fill="#769656"/><rect x="478" y="483" width="47" height="47" fill="#EEEED2"/>
+
+  <!-- Queens: board=[0,2,5,7,9,4,8,1,3,6]
+       center x = 55 + col*47 + 23
+       queen y  = 60 + row*47 + 35  -->
+  <!-- Row0,Col0 --> <text x="78"  y="95"  text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row1,Col2 --> <text x="172" y="142" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row2,Col5 --> <text x="313" y="189" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row3,Col7 --> <text x="407" y="236" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row4,Col9 --> <text x="501" y="283" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row5,Col4 --> <text x="266" y="330" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row6,Col8 --> <text x="454" y="377" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row7,Col1 --> <text x="125" y="424" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row8,Col3 --> <text x="219" y="471" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+  <!-- Row9,Col6 --> <text x="360" y="518" text-anchor="middle" font-size="36" font-family="serif" fill="#FFD700" filter="url(#qs)">♛</text>
+
+  <!-- Footer -->
+  <text x="290" y="548" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="11"
+        fill="#58A6FF">✓ 724 distinct solutions  ·  No two queens attack each other</text>
+  <text x="290" y="564" text-anchor="middle" font-family="'Segoe UI',Arial" font-size="10"
+        fill="#8b949e">Aksum University, AIT  ·  Design and Analysis of Algorithms</text>
+</svg>

@@ -99,6 +99,14 @@ java -cp out nqueens.NQueensSolver
 
 ![N=8 Solution](screenshots/n8_solution.svg)
 
+**Board Visualization — N=10, Solution #1**
+
+![N=10 Solution](screenshots/n10_solution.svg)
+
+**Board Visualization — N=12, Solution #1**
+
+![N=12 Solution](screenshots/n12_solution.svg)
+
 **Solution Count Chart**
 
 ![Solution Count](screenshots/solution_counts.svg)
