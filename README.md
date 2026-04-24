@@ -114,3 +114,9 @@ java -cp out nqueens.NQueensSolver
 ---
 
 > See `docs/` for full requirements, design document, and implementation plan.
+
+---
+
+## 📄 Report
+
+[View Full HTML Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/N-QUEENS-PROBLEM/blob/main/docs/report.html)
