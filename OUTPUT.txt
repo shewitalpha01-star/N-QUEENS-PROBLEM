@@ -1,9 +1,9 @@
 ============================================================
 N-Queens Solver
 Course: Design and Analysis of Algorithms
-University: Aksum University, AIT
+University: Aksum University, AIT🖥️
 Faculty: Computing Technology
-Department: Computer Science
+Department: Computer Science💻
 ============================================================
 
 ============================================================
