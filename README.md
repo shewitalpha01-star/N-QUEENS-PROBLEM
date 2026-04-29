@@ -35,18 +35,18 @@ This is a classic **constraint satisfaction problem** modelling real-world scena
 
 ## Features Implemented
 
-- ✅ Backtracking algorithm with pruning
-- ✅ 1D array representation — `index = row`, `value = column` (row conflicts structurally impossible)
-- ✅ Bounding function `isSafe()` — checks column and diagonal conflicts
-- ✅ Solves for N = 8, 10, 12
-- ✅ Counts all distinct solutions
-- ✅ Displays first 3 solutions as visual Q/. grid with row/column labels
-- ✅ Raw 1D array printed under each solution board
-- ✅ Pruned branch count + pruning % per board size
-- ✅ Execution time (ms) and recursive call count per board size
-- ✅ Summary table — N, solutions, time, recursive calls, pruned branches
-- ✅ Complexity analysis — N! worst case vs actual calls with % reduction
-- ✅ Real-world applications section in output
+-  Backtracking algorithm with pruning
+-  1D array representation — `index = row`, `value = column` (row conflicts structurally impossible)
+-  Bounding function `isSafe()` — checks column and diagonal conflicts
+-  Solves for N = 8, 10, 12
+-  Counts all distinct solutions
+-  Displays first 3 solutions as visual Q/. grid with row/column labels
+-  Raw 1D array printed under each solution board
+-  Pruned branch count + pruning % per board size
+-  Execution time (ms) and recursive call count per board size
+-  Summary table — N, solutions, time, recursive calls, pruned branches
+-  Complexity analysis — N! worst case vs actual calls with % reduction
+-  Real-world applications section in output
 
 ---
 
